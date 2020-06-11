@@ -1,0 +1,84 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-06-11 16:15:41
+ * @LastEditTime: 2020-06-11 22:05:46
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /vue/js/compotent.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+    <title>Todolist组件的拆分</title>
+  </head>
+  <style>
+    .head{
+      display: flex;
+      width: 400px;
+    }
+
+    .head input{
+      flex: 1;
+    }
+
+    .table_hd{
+      width: 400px;
+      border: 1px red solid;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 ;
+    }
+    .table_body{
+      width: 400px;
+      border: 1px green solid;
+    }
+
+    .each{
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .info{
+      display: flex;
+      justify-content: space-between;
+    }
+
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .lf, .rh{
+      text-transform:capitalize
+    }
+
+  </style>
+  <body>
+
+    <div class="" id="app">
+      {{message}}
+    <div class='head'>
+      <span>Search</span>
+      <input type="text" v-model="message" @input="search($event)">
+    </div>
+    <div class="body" id="">
+      <div class="table_hd">
+        <div class='lf' @click='handleSubmit'>{{gridColumns[0]}}</div>
+        <div class='rh' @click='handleDelete'>{{gridColumns[1]}}</div>
+      </div>
+      <div class="table_body">
+        <div v-for="item in gridData" class='info'>
+          <div v-if='s'>{{item.name}}</div>
+          <div v-if='s'>{{item.power}}</div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </body>
+  <script src="/js/Todolist.js"></script>
+</html>

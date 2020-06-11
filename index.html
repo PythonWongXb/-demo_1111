@@ -1,0 +1,95 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-06-11 09:22:43
+ * @LastEditTime: 2020-06-11 16:16:28
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /vue/index.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+  <title>Document</title>
+  <link rel="stylesheet" href="./semantic.min.css">
+</head>
+<body>
+  <div id="app">
+    <!-- {{ loggedIn ? message : '请先登录 ：）' }} -->
+    <!-- <img :src="imageSrc" :style="{width: imageWidth}" alt=""> -->
+    <div class="ui container">
+      <div class="ui hidden divider">
+        <!-- <div class="ui segment" v-if="loggedIn">
+          <p>message</p>
+        </div>
+        <div class="ui yellow segment" v-else>
+          <p>:)</p>
+        </div> -->
+        <!-- <template v-for="(item, index) in items">
+
+          <div >
+            {{ item.text }}
+            {{ index }}
+          </div>
+          <div class="ui divider"></div>
+        </template> -->
+        <!-- <div class="ui red circular label">
+          {{ counter }}
+        </div>
+        <button class='ui button' v-on:click='like'>
+          like
+        </button> -->
+
+        <!-- <div class="ui input">
+          <input type="text" v-on:keyup.enter='process'>
+        </div> -->
+
+        <!-- <div class="ui green inverted segment">
+          {{message3}}
+        </div>
+
+        <div class="ui radio checkbox">
+          <input type="radio" v-model='message3' value="hello">
+          <label>hello</label>
+        </div>
+
+        <div class="ui radio checkbox">
+          <input type="radio" v-model='message3' value="hola">
+          <label>hola</label>
+        </div>
+
+        <div class="ui radio checkbox">
+          <input type="radio" v-model='message3' value="你好">
+          <label>你好</label>
+        </div> -->
+
+        <!-- <div class="ui input">
+          <input type="text" v-bind:value="message" v-on:input='message = $event.target.value'>
+          <input type="text" v-bind:value="message" v-model='message'>
+        </div> -->
+
+
+        <div class="ui pink inverted segment">
+          {{ selected }}
+        </div>
+
+        <select name="" id="" class='ui fluid dropdown' v-model = 'selected'>
+          <option v-for="option in options" :value = "option.value">
+            {{ option.value }}
+          </option>
+        </select>
+
+      </div>
+      <!-- <button v-bind:class = "[buttonClass, colorClass, {loading: isloading}]">按钮</button> -->
+
+
+    </div>
+
+    <!-- <div v-text = "message1"></div>
+    <div v-html = "message1"></div> -->
+  </div>
+</body>
+<script src="js/index.js"></script>
+</html>
